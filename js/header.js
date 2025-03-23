@@ -6,6 +6,8 @@ const headerClose=document.querySelector('.header__close');
 const dropdownMenu = document.querySelector('.dropdown__menu');
 const header = document.querySelector('header');
 
+window.location.origin='https://yhan-dev.github.io/boosterdesignoffice.github.io/index.html';
+
 navlinks.forEach(links=>links.addEventListener('click', (e)=>
     {                                                                             //Header active links
         navlinks.forEach(links=>links.classList.remove('active'))
