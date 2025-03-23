@@ -232,12 +232,12 @@ function favIconPrimary()
         {
             if(window.location.pathname=='/' || window.location.pathname=='index.html')
             {
-                fav.setAttribute('href','/src/img/favicon/primary.png');
+                fav.setAttribute('href','src/img/favicon/primary.png');
             }
 
             else
             {
-                fav.setAttribute('href','../src/img/favicon/primary.png');
+                fav.setAttribute('href','./src/img/favicon/primary.png');
             }
         }
     );
