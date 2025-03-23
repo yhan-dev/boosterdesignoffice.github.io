@@ -18,7 +18,7 @@ navlinks.forEach(links=>links.addEventListener('click', (e)=>
             navlinks[1].classList.add('active');
             sessionStorage.setItem('bg','visible');
             document.body.classList.toggle('overflow-hidden');
-            const menuOpen = new Audio("./src/audio/ui-click.wav");
+            const menuOpen = new Audio("src/audio/ui-click.wav");
             menuOpen.play();
 
             if(window.innerWidth>=1526)
@@ -265,7 +265,7 @@ function favIconDarkMode()
 
 const employeeImage = document.querySelectorAll('.employee>img');
 const testimonialBrands = document.querySelectorAll(".testimonial>.testimonial__info>img");
-const switchSound = new Audio("./src/audio/torch-click.wav");
+const switchSound = new Audio("src/audio/torch-click.wav");
 const playSound = ()=>{switchSound.play();}
 
 function darkMode()
