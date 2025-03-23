@@ -247,7 +247,7 @@ function favIconDarkMode()
 {
     favIcon.forEach(fav=>
         {
-            if(window.location.pathname=='./' || window.location.pathname=='./tr/tr.html')
+            if(window.location.pathname=='./' || window.location.pathname=='./index.html')
             {
                 fav.setAttribute('href','./src/img/favicon/darkmode.png');
             }
