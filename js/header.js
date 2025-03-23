@@ -422,13 +422,13 @@ var langSwitch = (event)=>
     {
         if(event.target.id=='turkce')
         {
-            window.location.href='http://127.0.0.1:5500/tr/tr.html';
+            window.location.href='https://yhan-dev.github.io/boosterdesignoffice.github.io/tr/tr.html';
             sessionStorage.setItem('lang','turkce');
         }
 
         else
         {
-            window.location.href='http://127.0.0.1:5500/index.html';
+            window.location.href='https://yhan-dev.github.io/boosterdesignoffice.github.io/';
             sessionStorage.setItem('lang','english');
         }
 
