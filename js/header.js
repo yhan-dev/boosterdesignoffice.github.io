@@ -247,14 +247,14 @@ function favIconDarkMode()
 {
     favIcon.forEach(fav=>
         {
-            if(window.location.pathname=='/' || window.location.pathname=='tr/tr.html')
+            if(window.location.pathname=='./' || window.location.pathname=='./tr/tr.html')
             {
-                fav.setAttribute('href','../src/img/favicon/darkmode.png');
+                fav.setAttribute('href','./src/img/favicon/darkmode.png');
             }
 
             else
             {
-                fav.setAttribute('href','/src/img/favicon/darkmode.png');
+                fav.setAttribute('href','./src/img/favicon/darkmode.png');
             }
         }
     );
@@ -412,7 +412,7 @@ else
                     {
                         image.setAttribute('src',`/../src/img/brands with color/${image.alt}.svg`);
                     }
-        }
+        }   
     );
 
     
