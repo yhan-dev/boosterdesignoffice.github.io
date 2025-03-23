@@ -1,0 +1,49 @@
+@use '../abstracts/' as a;
+
+@media(width<a.convertRem(903))
+{
+    section#testimonials
+    {
+        &>.testimonial__wrapper
+        {
+            &>.testimonials
+            {
+                &>.testimonial
+                {
+                    flex-direction: column;
+                    row-gap: 2rem;
+
+                    &>.testimonial__info
+                    {
+                        &>.client__info
+                        {
+                            &>.seperator
+                            {
+                                display: none;
+                            }
+                            
+                            flex-direction: column;
+                            row-gap: 0.25rem;
+                            align-items: center;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(width<a.convertRem(426))
+{
+    section#testimonials
+    {
+        .testimonial__wrapper
+        {
+            .swiper-button-prev,.swiper-button-next
+            {
+                display:none;
+            }
+        }
+    }
+}

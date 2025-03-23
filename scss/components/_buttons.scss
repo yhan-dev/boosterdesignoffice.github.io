@@ -1,0 +1,108 @@
+.btn--primary
+{
+    background: var(--clr-primary);
+    padding: 0.8rem;
+    border-radius: var(--border-radius);
+    color:var(--clr-fourth);
+    transition: var(--transition);
+    width: min-content;
+    height: min-content;
+    font-size: 0.75rem;
+    display: inline-block;
+    
+
+    & i
+    {
+        margin-right: .5rem;
+    }
+
+    &:hover
+    {
+        background: var(--clr-secondary);
+    }
+    
+}
+
+.second
+{
+    background:var(--clr-dark-secondary);
+}
+
+.light-dark-mode
+{
+    cursor: pointer;
+    background-color: var(--clr-fifth);
+    padding: .56rem;
+    border-radius: 100%;
+    width: min-content;
+    height: min-content;
+    transition: var(--transition);
+    line-height: initial;
+
+    & .sun-icon
+    {
+        
+        display: none;
+    }
+
+    &:hover
+    {
+        background-color: var(--clr-secondary);
+    }
+
+    &:hover > i
+    {
+        color:var(--clr-fourth);
+        transform: rotateZ(-15deg);
+        
+    }
+
+    & i
+    {
+        transition: var(--transition);
+    }
+}
+
+
+
+.header__toggle
+{
+    position: relative;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    caret-color: transparent;
+    
+    
+    
+
+    .header__burger,.header__close
+    {
+        position: absolute;
+        width: max-content;
+        height: max-content;
+        inset: 0;
+        margin:auto;
+        pointer-events: none;
+        transition: all .3s;
+        
+    } 
+
+    .header__close
+    {
+        opacity: 0;
+    }
+
+    
+
+
+   
+
+    
+
+
+}
+
+
+

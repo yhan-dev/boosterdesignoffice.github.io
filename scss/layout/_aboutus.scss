@@ -1,0 +1,107 @@
+@use '../abstracts/' as a;   //About us section for the layout of 320px
+
+section#aboutus
+{
+    background-color:var(--clr-section);
+    position: relative;
+
+    &::before
+    {   
+        content:'';
+        position: absolute;
+        left: 0;
+        top:0;
+        bottom:0;
+        right: 0;
+        background: linear-gradient(to top,rgb(255,255,255)60%,rgba(255,255,255,0.6)100%);
+        width: 100%;
+        height: 100%;
+        opacity:1;
+        transition: opacity .5s,visibility .5s;
+    }
+
+    &>.aboutus__wrapper>.image__wrapper--secondary
+    {
+        overflow: hidden;
+        border-radius:1rem;
+        width:100%;
+        height: a.convertRem(175);
+        margin-bottom: 2rem;
+        
+        &>img
+        {   
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &>.aboutus__wrapper
+    {
+    
+        &>.text__wrapper
+        {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;            
+
+            &>.separator__line
+            {
+                display: none;
+                opacity: 0.3;
+            }
+
+            &>p
+            {
+                font-size: 1rem;
+                font-weight: 500;
+                text-align: justify;
+                line-height: 1.7;
+            }
+
+            &>.info-wrapper
+            {
+                display:flex;
+                flex-direction: column;
+                gap:1.5rem;
+
+                &>.info-box
+                {
+                    padding: 0.3rem;
+                    background: var(--clr-dark-light);
+                    border-radius: a.convertRem(100);
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:hover
+                    {
+                        opacity: 0.5;
+                    }
+
+                    &>p
+                    {
+                        font-size: 0.9rem;
+                        font-weight: 300;
+                    }
+                    
+
+                    &>.icon__wrapper
+                    {
+                        background: rgba(159,157,157,0.5);
+                        border-radius: 50%;
+                        width: 1.75rem;
+                        height: 1.75rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 0.35rem;
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+}

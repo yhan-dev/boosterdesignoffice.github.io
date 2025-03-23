@@ -1,0 +1,31 @@
+@use '../abstracts/' as a;
+
+@media (width>=a.convertRem(629)) and (width<=a.convertRem(1280))
+{
+    section#portfolio
+    {
+        &>.works__wrapper
+        {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+@media (width>=a.convertRem(1280))
+{
+    section#portfolio
+    {
+        &>.works__wrapper
+        {
+            grid-template-columns: repeat(3,1fr);
+
+            &>.work
+            {
+                &>.image__wrapper--third
+                {
+                    height: a.convertRem(250);
+                }
+            }
+        }
+    }
+}

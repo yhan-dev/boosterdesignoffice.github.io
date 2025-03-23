@@ -1,0 +1,45 @@
+@use '../abstracts/' as a;
+
+section#services
+{
+    background: var(--clr-section);
+
+    &>.service__wrapper
+    {
+        display: grid;
+        gap:4rem;
+
+        &>.service
+        {
+            width:100%;
+            
+            &>.service__title
+            {
+                margin-bottom: 1rem;
+
+                &>h3
+                {
+                    font-weight: 500;
+                    display: inline;
+                    
+
+                    &>i
+                    {
+                        margin-right: 0.5rem;
+                    }
+                }
+
+                }
+
+                &>.service__description
+                {
+                    opacity: 0.5;
+                    &>p
+                    {
+                        text-align: justify;
+                        line-height: 1.7;
+                    }
+                }
+            }
+        }
+    }

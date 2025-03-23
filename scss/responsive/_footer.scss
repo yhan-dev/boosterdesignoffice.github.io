@@ -1,0 +1,75 @@
+@use '../abstracts/' as a;
+
+@media(width>=a.convertRem(426)) and (width<a.convertRem(700))
+{
+    .footer__main
+    {
+        &>.footer__wrapper
+        {
+            &>footer
+            {
+                &>.quick__links
+                {
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+
+                    &>:nth-child(3)
+                    {
+                        grid-column: 1/3;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(width>=a.convertRem(700)) and (width<a.convertRem(1024))
+{
+    .footer__main
+    {
+        &>.footer__wrapper
+        {
+            &>footer
+            {
+                &>.footer__data
+                {
+                    flex-direction: row;
+                    gap: 3rem;
+                }
+            }
+        }
+    }
+}
+@media(width>=a.convertRem(1024))
+{
+    .footer__main
+    {
+        &>.footer__wrapper
+        {
+            &>footer
+            {
+                flex-direction: row;
+                justify-content: space-between;
+
+            }
+        }
+    }
+}
+
+@media(width>=a.convertRem(700))
+{
+    .footer__main
+    {
+        &>.footer__wrapper
+        {
+            &>footer
+            {
+                &>.quick__links
+                {
+                    flex-direction: row;
+                }
+
+            }
+        }
+    }
+}
+

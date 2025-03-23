@@ -1,0 +1,44 @@
+@use '../abstracts/' as a;
+
+@media (width>a.convertRem(768))
+{
+    .landing__page>section#brands
+    {
+        margin-block-end: 0;
+        margin-block: 3.5rem;
+
+        &>.brands__wrapper
+    {    
+        justify-content: space-between;
+        
+    }
+    }
+}
+
+@media (width>a.convertRem(768)) and (width<=a.convertRem(1024))
+{
+    .landing__page>section#brands
+    {
+        padding-inline: 2rem;
+    }
+}
+
+@media (width>a.convertRem(1024)) and (width<=a.convertRem(1526))
+{
+    .landing__page>section#brands
+    {
+        padding-inline: 3.5rem;
+    }
+}
+
+@media (width>=a.convertRem(1526))
+{
+    .landing__page>section#brands
+    {
+        padding-inline: 0;
+    }
+    
+}
+
+
+

@@ -1,0 +1,28 @@
+@use '../abstracts/' as a;
+
+@media (width>a.convertRem(768)) and (width<a.convertRem(1526))
+{
+    .landing__page
+    {
+        margin-top: a.convertRem(83);
+        
+    }
+}
+
+@media(width>a.convertRem(1526))
+{
+    .landing__page
+    {
+        margin-top: a.convertRem(100);
+        // height: calc(100vh - a.convertRem(116));
+    }
+}
+
+// @media (width>a.convertRem(768)) and (width<a.convertRem(1526))
+// {
+//     .landing__page
+//     {
+//         height: calc(100vh - a.convertRem(90));
+//     }
+// }
+

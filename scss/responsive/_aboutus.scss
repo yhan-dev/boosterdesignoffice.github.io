@@ -1,0 +1,93 @@
+@use '../abstracts/' as a;
+
+@media (width>a.convertRem(425)) and (width<a.convertRem(768))
+{
+    section#aboutus
+    {
+        
+        &>.aboutus__wrapper
+    {
+        &>.text__wrapper
+        {
+            &>.info-wrapper
+            {
+                display:grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+    }
+    
+}
+
+@media (width>=a.convertRem(768))
+{
+    section#aboutus
+    {
+        &>.aboutus__wrapper
+        {   
+            display:flex;
+            column-gap: 2rem;
+
+            &>.image__wrapper--secondary
+        {
+            width: 75%;
+            margin-bottom: 0;
+            height: auto;
+        }
+
+        &>.text__wrapper
+        {
+            justify-content: space-between;
+
+            &>.separator__line
+            {
+                display: block;
+                height: a.convertRem(0.25);
+                width: 100%;
+                background-color: var(--clr-font-primary);
+            }
+        
+            &>.info-wrapper
+            {
+                display: flex;
+
+                &>:nth-child(2)
+                {
+                    width: 75%;
+                }
+                &>:nth-child(3)
+                {
+                    width: 50%;
+                }
+                &>:nth-child(4)
+                {
+                    width: 30%;
+                }
+            }
+
+
+        }
+            
+        }
+
+        
+    }
+}
+
+@media (width>=a.convertRem(1526))
+{
+    section#aboutus
+    {
+        &>.aboutus__wrapper
+        {
+            column-gap: 3rem;
+        }
+    }
+}
+
+
+
+
+
+

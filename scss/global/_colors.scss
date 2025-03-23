@@ -1,0 +1,16 @@
+:root
+{
+    --clr-primary:#76C49B;
+    --clr-secondary: #4f52b0;
+    --clr-third:#fabe49;
+    --clr-font-primary: #413e3e;
+    --clr-accent:hsl(0, 0%, 96%);
+    --clr-fourth: hsl(0, 0%, 100%);
+    --clr-fifth:#dedede;
+    --clr-gradient-primary:linear-gradient(to right,var(--clr-primary) 25%,var(--clr-secondary)100%);
+    --clr-font-gradient:linear-gradient(to bottom,var(--clr-primary) 25%,var(--clr-secondary)100%);
+    --clr-sixth:#9f9d9d;
+    --clr-seventh:#808080;
+    --clr-section:rgba(224,222,222,.3);
+    
+}

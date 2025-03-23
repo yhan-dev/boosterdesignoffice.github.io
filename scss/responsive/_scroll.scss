@@ -1,0 +1,29 @@
+@use '../abstracts/' as a;
+
+@media (width>a.convertRem(768)) and (width<a.convertRem(1526)) //for tablet & small laptop / small laptop & laptop layout
+{
+    body.scroll .header-wrapper                  
+{
+    padding-block:1rem;
+}
+
+body.scroll .landing__page
+{
+    margin-top: a.convertRem(80);
+}
+
+}
+
+@media (width>=a.convertRem(1526))
+{
+    body.scroll .header-wrapper                  
+{
+    padding-block:1.25rem;
+}
+
+body.scroll .landing__page
+{
+    margin-top: a.convertRem(100);
+}
+
+}

@@ -1,0 +1,48 @@
+@use '../abstracts/' as a;
+
+section#meetourteam
+{
+    &>.employees__wrapper
+    {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit,minmax(a.convertRem(250),1fr));
+
+        &>.employee
+        {   
+            padding: 0.75rem;
+            border:a.convertRem(1) solid var(--clr-dark-accent);
+            border-radius: 0.5rem;
+        
+            &>.employee__image
+            {
+                height: a.convertRem(150);
+                transform: translateX(-50%);
+                position: relative;
+                margin-bottom: 1rem;
+                left: 50%;
+                cursor: pointer;
+            }
+
+            &>.employee__info
+            {
+                text-align: center;
+
+                &>.employee__identity
+                {
+                    &>.name
+                    {
+                        margin-bottom: 0.2rem;
+                    }
+                    margin-bottom: 1rem;
+                }
+
+                &>.socialmedia
+                {
+                    margin:0;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

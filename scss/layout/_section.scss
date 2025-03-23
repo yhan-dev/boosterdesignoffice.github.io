@@ -1,0 +1,12 @@
+@use '../abstracts/' as a;
+
+.section__flexible
+{
+    padding-inline: 1rem;
+    padding-block: 3rem;
+}
+
+.section__title
+{
+    margin-bottom: 3rem;
+}

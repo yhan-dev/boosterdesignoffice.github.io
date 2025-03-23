@@ -1,0 +1,265 @@
+@use 'functions' as f;
+@use 'sass:map';
+
+
+$breakpoints :
+(
+    'mobile-md': f.convertRem(376),
+    'mobile-lg':f.convertRem(426    ),
+    'tablet': f.convertRem(768),
+    'laptop': f.convertRem(1024),
+    'desktop':f.convertRem(1440),
+);
+
+@mixin breakpointUp($size)
+{
+    @media (width>= map.get($breakpoints,$size))
+    {
+        @content;
+    }
+}
+
+@mixin breakpointDown($size)
+{
+    @media (width<= map.get($breakpoints,$size))
+    {
+        @content;
+    }
+}
+
+@mixin headerBoilerplate
+{   
+
+    &__logo img
+    {
+      width: f.convertRem(calc((226.2 / 100)*90));
+    }
+
+    &__navbar
+    {
+    position: absolute;
+    width: f.convertRem(270);
+    z-index:999;
+    right:0;
+    top:0;
+    opacity: 1;
+    height: 100vh;
+    flex-direction: column;
+    pointer-events: none;
+    overflow-y:auto;
+    overflow-x: hidden;
+    background-color: var(--clr-fourth);
+    margin-right: f.convertRem(-270);;
+    transition: .3s margin-right;
+
+    
+
+    & .btn--primary,& .light-dark-mode
+    {
+        display: none;
+    }
+    
+    }
+
+    &__items
+    {
+        flex-direction: column;
+        gap:1.5rem;
+        padding-top: 1.5rem;
+        
+    }
+
+
+   
+    &__item .header__link
+    {
+        
+        display: flex;
+        align-items: center;
+        padding: .5rem 0 .5rem 1rem;
+        font-weight: bold;
+        
+
+
+    }
+
+    &__item:nth-child(3) .header__link
+    {
+        justify-content: space-between;
+        padding-right: 1rem;
+
+    }
+    
+
+
+    &__item a:hover::before
+    {
+        width: 100%;
+        bottom:f.convertRem(-4.5);
+        left:0;
+        
+    }
+
+    &__item .active::before
+    {
+        width:100%;
+        bottom:f.convertRem(-4.5);
+        left:0;
+        
+
+    }
+
+
+.socialmedia
+{
+    margin-top: 1.5rem;
+    margin-left:1rem;
+    
+    
+}
+
+
+
+
+.dropdown__item .dropdown__arrow
+{
+    font-size: .92rem;
+    font-weight: bold;
+    transition: transform .2s;
+}
+
+.dropdown__menu
+{    
+    transition: height .3s;
+    height: 0;
+    overflow: hidden;
+}
+
+.dropdown__menu .dropdown__link
+{
+    padding: 1rem 1rem 1rem 1.5rem;
+    display: flex;
+    column-gap: .5rem;
+    
+
+&:hover::before
+{
+    display: none;
+}
+    
+
+&:hover
+{
+    background-color: var(--clr-font-primary);
+    color:var(--clr-fourth);
+}
+}
+
+} 
+
+@mixin headerBoilerplateSecond
+{
+    .header-wrapper
+  {
+    padding: 1.3rem 3.5rem;
+  }
+
+    .header
+    {
+        @include headerBoilerplate;
+
+        
+
+        &__container
+        {
+            
+            column-gap: 2.2rem;
+           
+
+            &>.header__toggle
+            {
+                order:3;
+            }
+
+            &>.btn--primary
+            {
+                order:2;
+            }
+
+            &  .socialmedia
+            {
+                display: flex;
+                margin-top: 0;
+                padding-left: 0;
+
+                &__icon:first-child .info-box
+                {
+                    bottom:f.convertRem(-50);
+                    right: -250%;
+
+                    &::before
+                    {
+                        display: block;
+                    }
+                }
+                
+
+            }
+
+            
+        }
+        
+        &__navbar .socialmedia
+        {
+            display: none;
+        }
+
+        
+        
+
+        &__data
+        {        
+            .btn--primary,.light-dark-mode
+            {
+                order:initial;
+                margin: 0;
+            }
+        }
+
+        &__close--secondary
+        {
+            font-size: 1.75rem;
+            align-self: flex-end;
+            margin-right: 1rem;
+            position: absolute;
+            top:.70rem;
+            cursor: pointer;
+            transition: color .2s;
+            color:var(--clr-sixth);
+
+            &:hover
+            {
+                color:var(--clr-font-primary);
+            }
+            
+        }
+    }
+
+
+    .show-icon .header__burger
+    {
+        opacity:0;
+        transform: none;
+
+    }
+
+
+    .show-icon .header__close
+    {
+        opacity:1;
+        transform: none;
+        
+    }
+}
+
+

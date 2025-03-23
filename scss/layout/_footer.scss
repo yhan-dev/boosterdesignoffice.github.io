@@ -1,0 +1,104 @@
+@use '../abstracts/' as a; //Layout of the Footer Section at 320px
+
+.footer .darkmode
+{
+    display:none;
+}
+
+.footer__main
+{
+    &>.footer__wrapper
+    {
+        &>footer
+        {
+            &>.footer__data
+            {
+                display:flex;
+                flex-direction: column;
+                gap:1.5rem;
+                width: min-content;
+                align-items: center;
+
+                &>.slogan
+                {   
+                    line-height: 1.5;
+                    text-align: center;
+                    opacity: 0.5;
+                    width: a.convertRem(200);
+                }
+
+                &>.socialmedia
+                {
+                    justify-content: center;
+                    margin: 0;
+                }
+            }
+            &>.quick__links
+            {
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+
+                &>.footer__navbar,&>.footer__services,&>.footer__contact
+            {
+                &>.footer__title
+                {
+                    &>i
+                    {
+                        font-weight: 500;
+                    }
+
+                    margin-bottom: 2rem;
+                }
+
+
+                &>.footer__items>.footer__item:not(:last-child)
+                {
+                    margin-bottom: 1rem;
+                }
+
+                text-align: center;
+
+
+            }
+
+            &>.footer__navbar
+            {
+                order:0;
+            }
+            &>.footer__services
+            {
+                order: 1;
+            }
+            &>.footer__contact
+            {
+                order: 2;
+            }
+        }
+            
+            display: flex;
+            flex-direction: column;
+            row-gap: 5rem;
+            align-items: center;
+        }
+    }
+    
+    background: var(--clr-section);
+
+    &>.copyright__main
+    {
+        &>.copyright__container
+        {
+            &>p
+            {
+                display: inline-block;
+                opacity: 0.75;
+            }
+            text-align: center;
+            padding-block: 0.5rem;
+            padding-inline: 1rem;
+        }
+
+        background: var(--clr-primary);
+    }
+}

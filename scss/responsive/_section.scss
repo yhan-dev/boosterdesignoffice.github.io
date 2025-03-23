@@ -1,0 +1,30 @@
+@use '../abstracts/' as a;
+
+@media (width>a.convertRem(768)) and (width<=a.convertRem(1024))
+{
+    .section__flexible
+    {
+        padding-inline: 2rem;
+        
+
+    }
+}
+
+@media (width>a.convertRem(1024)) and (width<a.convertRem(1526))
+{
+    .section__flexible
+    {
+        padding-inline: 3.5rem;
+        
+
+    }
+}
+
+@media (width>=a.convertRem(1526))
+{
+    .section__flexible
+    {
+        padding-inline: 5rem;
+        
+    }
+}

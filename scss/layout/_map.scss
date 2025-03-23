@@ -1,0 +1,8 @@
+@use '../abstracts/' as a;
+
+#map
+{
+    height: a.convertRem(350);
+    width: 100%;
+    border-radius: 1rem;
+}

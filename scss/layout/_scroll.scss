@@ -1,0 +1,22 @@
+@use '../abstracts/' as a;
+
+body.scroll .header-wrapper                  //for mobile & tablet layout
+{
+    padding-block:0.75rem ;
+}
+
+body.scroll .landing__page
+{
+    margin-top: a.convertRem(65);
+}
+
+// body,html
+// {
+//     scroll-snap-type: y ;
+// }
+
+// html section
+// {
+//     scroll-snap-align: center none;
+//     scroll-margin-block-start: 3rem;
+// }

@@ -1,0 +1,7 @@
+@use '../abstracts/' as a;      //Divi
+
+.landing__page
+{
+    margin-top: a.convertRem(72);
+
+}

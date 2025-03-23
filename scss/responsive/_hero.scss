@@ -1,0 +1,110 @@
+@use '../abstracts/' as a; 
+
+@media(width>a.convertRem(768))
+{
+    .landing__page>section#hero
+    {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &>.hero__container
+        {
+            bottom: 0;
+            order:0;
+            align-items: start;
+            z-index: 1;
+            width: min-content;
+            padding-inline: 0;
+            
+
+            &>.hero__text
+            {
+                text-align: initial;
+            }
+        }
+
+        &>.image__wrapper
+        {
+            order:1;
+            &::before
+            {
+                background: radial-gradient(circle,rgba(65, 62, 62, 0.1)0%,rgb(255, 255, 255)90%);
+            }
+            width: 75%;
+        }
+    }
+}
+
+@media (width>a.convertRem(768)) and (width<a.convertRem(1526))
+{
+    section#hero>.image__wrapper
+    {
+        height: a.convertRem(300);
+    }
+}
+
+@media (width>a.convertRem(768)) and (width<=a.convertRem(1024))
+{
+    section#hero
+    {
+        padding-inline: 2rem;
+    }
+}
+
+@media (width>a.convertRem(1024)) and (width<a.convertRem(1526))
+{
+    section#hero
+    {
+        padding-inline: 3.5rem;
+    }
+}
+
+@media (width>a.convertRem(1176))
+{
+    .landing__page>section#hero
+    {
+        &>.hero__container
+        {
+
+            &>.hero__text
+            {
+                font-size: 1.85rem;
+            }
+        }
+
+    }
+}
+
+@media (width>=a.convertRem(1526))
+{
+    .landing__page>section#hero
+    {
+        &>.image__wrapper
+        {
+            height: a.convertRem(375);
+        }
+
+        &>.hero__container
+        {
+            &>.hero__text
+            {
+                font-size: 2.1rem;
+                
+            }
+    
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
