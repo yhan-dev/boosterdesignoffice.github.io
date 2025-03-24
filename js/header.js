@@ -16,9 +16,9 @@ navlinks.forEach(links=>links.addEventListener('click', (e)=>
             navlinks[1].classList.add('active');
             sessionStorage.setItem('bg','visible');
             document.body.classList.toggle('overflow-hidden');
-            const menuOpenEng = new Audio("/./src/audio/ui-click.wav");
+            const menuOpenEng = new Audio("./src/audio/ui-click.wav");
             const menuOpenTr = new Audio("./../src/audio/ui-click.wav");
-            if(window.location.pathname=='./' || window.location.pathname=='./index.html')
+            if(window.location.pathname=='/' || window.location.pathname=='/index.html')
             {
                 menuOpenEng.play();
             }
