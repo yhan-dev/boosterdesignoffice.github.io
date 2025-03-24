@@ -20,11 +20,11 @@ navlinks.forEach(links=>links.addEventListener('click', (e)=>
             const menuOpenTr = new Audio("./../audio/ui-click.wav");
             if(window.location.pathname=='./' || window.location.pathname=='./index.html')
             {
-                menuOpenEng.play();
+                menuOpenEng.play()
             }
             else
             {
-                menuOpenTr.play();
+                menuOpenTr.play()
             }
             
             
@@ -317,11 +317,11 @@ function darkMode()
 
             if(window.location.pathname=='./' || window.location.pathname=='./index.html')
             {
-                switchSoundEng.play();
+                switchSoundEng.play()
             }
             else
             {
-                switchSoundTr.play();
+                switchSoundTr.play()
             }
         }
 
