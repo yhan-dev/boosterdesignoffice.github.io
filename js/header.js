@@ -17,14 +17,14 @@ navlinks.forEach(links=>links.addEventListener('click', (e)=>
             sessionStorage.setItem('bg','visible');
             document.body.classList.toggle('overflow-hidden');
             const menuOpenEng = new Audio("./src/audio/ui-click.wav");
-            const menuOpenTr = new Audio("./../audio/ui-click.wav");
+            const menuOpenTr = new Audio("./../src/audio/ui-click.wav");
             if(window.location.pathname=='./' || window.location.pathname=='./index.html')
             {
-                menuOpenEng.play()
+                menuOpenEng.play();
             }
             else
             {
-                menuOpenTr.play()
+                menuOpenTr.play();
             }
             
             
@@ -274,7 +274,7 @@ function favIconDarkMode()
 const employeeImage = document.querySelectorAll('.employee>img');
 const testimonialBrands = document.querySelectorAll(".testimonial>.testimonial__info>img");
 const switchSoundEng = new Audio("./src/audio/torch-click.wav");
-const switchSoundTr = new Audio("./../src/torch-click.wav");
+const switchSoundTr = new Audio("./../src/audio/torch-click.wav");
 
 function darkMode()
 {
@@ -317,11 +317,11 @@ function darkMode()
 
             if(window.location.pathname=='./' || window.location.pathname=='./index.html')
             {
-                switchSoundEng.play()
+                switchSoundEng.play();
             }
             else
             {
-                switchSoundTr.play()
+                switchSoundTr.play();
             }
         }
 
