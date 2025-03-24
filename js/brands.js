@@ -1,6 +1,6 @@
 const brandInfo = document.createElement('div');
 const brandInfoText = document.createElement('p');
-brandInfo.style.display='none';;
+brandInfo.style.display='none';
 brandInfo.style.position='absolute';
 brandInfo.style.top='0';
 brandInfo.style.left='0';
@@ -30,25 +30,25 @@ brandImage.forEach(image=>
 
                 if(document.body.classList.contains('dark'))
                 {
-                    if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+                    if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                     {
-                        e.target.setAttribute('src',`/src/img/dark mode/${e.target.id}.svg`);
+                        e.target.setAttribute('src',`./src/img/dark mode/${e.target.id}.svg`);
                     }
                     else
                     {
-                        e.target.setAttribute('src',`/../src/img/dark mode/${e.target.id}.svg`);
+                        e.target.setAttribute('src',`./../src/img/dark mode/${e.target.id}.svg`);
                     }
                 }
 
                 else
                 {
-                    if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+                    if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                     {
-                        e.target.setAttribute('src',`/src/img/brands with color/${e.target.id}.svg`);
+                        e.target.setAttribute('src',`./src/img/brands with color/${e.target.id}.svg`);
                     }
                     else
                     {
-                        e.target.setAttribute('src',`/../src/img/brands with color/${e.target.id}.svg`);
+                        e.target.setAttribute('src',`./../src/img/brands with color/${e.target.id}.svg`);
                     }
                 }
                 
@@ -63,13 +63,13 @@ brandImage.forEach(image=>
             {                                                           //Hidden the brand info box and text
                 brandInfo.style.display='none';
 
-                if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+                if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                 {
-                    image.setAttribute('src',`src/img/brands without color/${e.target.id}.svg`);
+                    image.setAttribute('src',`./src/img/brands without color/${e.target.id}.svg`);
                 }
                 else
                 {
-                    image.setAttribute('src',`../src/img/brands without color/${e.target.id}.svg`);
+                    image.setAttribute('src',`./../src/img/brands without color/${e.target.id}.svg`);
                 }
                 
             }

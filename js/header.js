@@ -18,7 +18,7 @@ navlinks.forEach(links=>links.addEventListener('click', (e)=>
             document.body.classList.toggle('overflow-hidden');
             const menuOpenEng = new Audio("./src/audio/ui-click.wav");
             const menuOpenTr = new Audio("./../src/audio/ui-click.wav");
-            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/../index.html')
+            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
             {
                 menuOpenEng.play();
             }
@@ -28,7 +28,6 @@ navlinks.forEach(links=>links.addEventListener('click', (e)=>
             }
             
             
-
             if(window.innerWidth>=1526)
             {
                 html.classList.toggle('bg-added');
@@ -231,7 +230,7 @@ else
 const logo = document.querySelector('.header__logo img');
 const lightDark = document.querySelector('.light-dark-mode');
 const headerLogo = document.querySelector('.header__logo img');
-var storage = sessionStorage.getItem('dark');
+var storage = sessionStorage.setItem('dark','disabled');
 const body=document.body;
 const favIcon = document.querySelectorAll('[rel="icon"]');
 const favStorage = sessionStorage.getItem('fav');
@@ -240,14 +239,14 @@ function favIconPrimary()
 {
     favIcon.forEach(fav=>
         {
-            if(window.location.pathname=='/' || window.location.pathname=='index.html')
+            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
             {
-                fav.setAttribute('href','src/img/favicon/primary.png');
+                fav.setAttribute('href','./src/img/favicon/primary.png');
             }
 
             else
             {
-                fav.setAttribute('href','./src/img/favicon/primary.png');
+                fav.setAttribute('href','./../src/img/favicon/primary.png');
             }
         }
     );
@@ -257,14 +256,14 @@ function favIconDarkMode()
 {
     favIcon.forEach(fav=>
         {
-            if(window.location.pathname=='./' || window.location.pathname=='./index.html')
+            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
             {
                 fav.setAttribute('href','./src/img/favicon/darkmode.png');
             }
 
             else
             {
-                fav.setAttribute('href','./src/img/favicon/darkmode.png');
+                fav.setAttribute('href','./../src/img/favicon/darkmode.png');
             }
         }
     );
@@ -288,14 +287,14 @@ function darkMode()
             
             employeeImage.forEach(image=>
                 {
-                    if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+                    if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                     {
-                        image.setAttribute('src',`src/img/meet our team/${image.alt}/${image.alt}-primary-default.svg`);
+                        image.setAttribute('src',`./src/img/meet our team/${image.alt}/${image.alt}-primary-default.svg`);
                     }
 
                     else
                         {
-                            image.setAttribute('src',`/../src/img/meet our team/${image.alt}/${image.alt}-primary-default.svg`);
+                            image.setAttribute('src',`./../src/img/meet our team/${image.alt}/${image.alt}-primary-default.svg`);
                         }
                     
                 }
@@ -303,19 +302,19 @@ function darkMode()
 
             testimonialBrands.forEach(image=>
                 {
-                    if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+                    if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                         {
-                            image.setAttribute('src',`src/img/brands with color/${image.alt}.svg`);
+                            image.setAttribute('src',`./src/img/brands with color/${image.alt}.svg`);
                         }
         
                         else
                             {
-                                image.setAttribute('src',`/../src/img/brands with color/${image.alt}.svg`);
+                                image.setAttribute('src',`./../src/img/brands with color/${image.alt}.svg`);
                             }
                 }
             );
 
-            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/../index.html')
+            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
             {
                 switchSoundEng.play();
             }
@@ -334,32 +333,32 @@ function darkMode()
             scrollTopButton.style.background='var(--clr-dark-secondary)';
             employeeImage.forEach(image=>
                 {
-                    if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+                    if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                         {
-                            image.setAttribute('src',`src/img/meet our team/${image.alt}/${image.alt}-dark-default.svg`);
+                            image.setAttribute('src',`./src/img/meet our team/${image.alt}/${image.alt}-dark-default.svg`);
                         }
     
                         else
                             {
-                                image.setAttribute('src',`/../src/img/meet our team/${image.alt}/${image.alt}-dark-default.svg`);
+                                image.setAttribute('src',`./../src/img/meet our team/${image.alt}/${image.alt}-dark-default.svg`);
                             }
                 }
             );
             testimonialBrands.forEach(image=>
                 {
-                    if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+                    if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                         {
-                            image.setAttribute('src',`src/img/brands without color/${image.alt}.svg`);
+                            image.setAttribute('src',`./src/img/brands without color/${image.alt}.svg`);
                         }
         
                         else
                             {
-                                image.setAttribute('src',`/../src/img/brands without color/${image.alt}.svg`);
+                                image.setAttribute('src',`./../src/img/brands without color/${image.alt}.svg`);
                             }
                 }
             );
 
-            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/../index.html')
+            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                 {
                     switchSoundEng.play();
                 }
@@ -377,28 +376,28 @@ if(storage=='enabled')
     favIconDarkMode();
     employeeImage.forEach(image=>
         {
-            if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                 {
-                    image.setAttribute('src',`src/img/meet our team/${image.alt}/${image.alt}-dark-default.svg`);
+                    image.setAttribute('src',`./src/img/meet our team/${image.alt}/${image.alt}-dark-default.svg`);
                 }
 
                 else
                     {
-                        image.setAttribute('src',`/../src/img/meet our team/${image.alt}/${image.alt}-dark-default.svg`);
+                        image.setAttribute('src',`./../src/img/meet our team/${image.alt}/${image.alt}-dark-default.svg`);
                     }
         }
     );
 
     testimonialBrands.forEach(image=>
         {
-            if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                 {
-                    image.setAttribute('src',`src/img/brands without color/${image.alt}.svg`);
+                    image.setAttribute('src',`./src/img/brands without color/${image.alt}.svg`);
                 }
 
                 else
                     {
-                        image.setAttribute('src',`/../src/img/brands without color/${image.alt}.svg`);
+                        image.setAttribute('src',`./../src/img/brands without color/${image.alt}.svg`);
                     }
         }
     );
@@ -413,28 +412,28 @@ else
     favIconPrimary();
     employeeImage.forEach(image=>
         {
-            if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                 {
-                    image.setAttribute('src',`src/img/meet our team/${image.alt}/${image.alt}-primary-default.svg`);
+                    image.setAttribute('src',`./src/img/meet our team/${image.alt}/${image.alt}-primary-default.svg`);
                 }
 
                 else
                     {
-                        image.setAttribute('src',`/../src/img/meet our team/${image.alt}/${image.alt}-primary-default.svg`);
+                        image.setAttribute('src',`./../src/img/meet our team/${image.alt}/${image.alt}-primary-default.svg`);
                     }
         }
     );
 
     testimonialBrands.forEach(image=>
         {
-            if(window.location.pathname=='/' || window.location.pathname=='/index.html')
+            if(window.location.pathname=='/boosterdesignoffice.github.io/' || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
                 {
-                    image.setAttribute('src',`src/img/brands with color/${image.alt}.svg`);
+                    image.setAttribute('src',`./src/img/brands with color/${image.alt}.svg`);
                 }
 
                 else
                     {
-                        image.setAttribute('src',`/../src/img/brands with color/${image.alt}.svg`);
+                        image.setAttribute('src',`./../src/img/brands with color/${image.alt}.svg`);
                     }
         }   
     );
@@ -446,21 +445,21 @@ var langSwitch = (event)=>
     {
         if(event.target.id=='turkce')
         {
-            window.location.href='https://yhan-dev.github.io/boosterdesignoffice.github.io/tr/tr.html';
+            window.location.pathname='/boosterdesignoffice.github.io/tr/tr.html';
             sessionStorage.setItem('lang','turkce');
         }
 
         else
         {
-            window.location.href='https://yhan-dev.github.io/boosterdesignoffice.github.io/';
+            window.location.pathname='/boosterdesignoffice.github.io/';
             sessionStorage.setItem('lang','english');
         }
 
-        if(event.target.id=='english' && window.location.pathname=='/index.html' || window.location.pathname=='/' && window.innerWidth<1526)
+        if(event.target.id=='english' && window.location.pathname=='/boosterdesignoffice.github.io/index.html' || window.location.pathname=='/boosterdesignoffice.github.io/' && window.innerWidth<1526)
         {
             alert('Language is already english of your page!');
         }
-        else if(event.target.id=='turkce' && window.location.pathname=='/tr/tr.html' && window.innerWidth<1526)
+        else if(event.target.id=='turkce' && window.location.pathname=='/boosterdesignoffice.github.io/tr/tr.html' && window.innerWidth<1526)
         {
             alert('Sayfanız zaten Türkçe!');    
         }
@@ -528,14 +527,14 @@ headerContainer.appendChild(copyDark);
 
 const langStorage=sessionStorage.getItem('lang');
 
-if(window.location.pathname=="./index.html" || window.location.pathname=='./')
+if(window.location.pathname=="/boosterdesignoffice.github.io/" || window.location.pathname=='/boosterdesignoffice.github.io/index.html')
 {
     languageContainer.appendChild(copyTurkce);
     sessionStorage.setItem('lang','english');
 
 }
 
-else if(window.location.pathname=='./tr/tr.html')
+else if(window.location.pathname=='/boosterdesignoffice.github.io/tr/tr.html')
 {
     languageContainer.appendChild(copyEng);
     sessionStorage.setItem('lang','turkce');
@@ -566,19 +565,6 @@ const dropdownLinks = document.querySelectorAll('.dropdown__link');
         );
     }
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
 // function random(min,max)
 // {
 //     var result = (min+Math.random()*(max-min));  //only for practice
