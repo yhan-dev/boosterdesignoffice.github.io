@@ -230,7 +230,7 @@ else
 const logo = document.querySelector('.header__logo img');
 const lightDark = document.querySelector('.light-dark-mode');
 const headerLogo = document.querySelector('.header__logo img');
-var storage = sessionStorage.setItem('dark','disabled');
+var storage = sessionStorage.getItem('dark');
 const body=document.body;
 const favIcon = document.querySelectorAll('[rel="icon"]');
 const favStorage = sessionStorage.getItem('fav');
