@@ -264,7 +264,7 @@ function favIconDarkMode()
 const employeeImage = document.querySelectorAll('.employee>img');
 const testimonialBrands = document.querySelectorAll(".testimonial>.testimonial__info>img");
 const switchSound = new Audio("/src/audio/torch-click.wav");
-const playSound = ()=>{switchSound.play();}
+const playSound = ()=>{switchSound.play()}
 
 function darkMode()
 {
