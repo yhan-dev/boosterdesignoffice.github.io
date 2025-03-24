@@ -16,8 +16,18 @@ navlinks.forEach(links=>links.addEventListener('click', (e)=>
             navlinks[1].classList.add('active');
             sessionStorage.setItem('bg','visible');
             document.body.classList.toggle('overflow-hidden');
-            const menuOpen = new Audio("./src/audio/ui-click.wav");
-            menuOpen.play();
+            const menuOpenEng = new Audio("./src/audio/ui-click.wav");
+            const menuOpenTr = new Audio("./../audio/ui-click.wav");
+            if(window.location.pathname=='./' || window.location.pathname=='./index.html')
+            {
+                menuOpenEng.play();
+            }
+            else
+            {
+                menuOpenTr.play();
+            }
+            
+            
 
             if(window.innerWidth>=1526)
             {
@@ -263,8 +273,8 @@ function favIconDarkMode()
 
 const employeeImage = document.querySelectorAll('.employee>img');
 const testimonialBrands = document.querySelectorAll(".testimonial>.testimonial__info>img");
-const switchSound = new Audio("./src/audio/torch-click.wav");
-const playSound = ()=>{switchSound.play();}
+const switchSoundEng = new Audio("./src/audio/torch-click.wav");
+const switchSoundTr = new Audio("./../src/torch-click.wav");
 
 function darkMode()
 {
@@ -305,7 +315,14 @@ function darkMode()
                 }
             );
 
-            playSound();
+            if(window.location.pathname=='./' || window.location.pathname=='./index.html')
+            {
+                switchSoundEng.play();
+            }
+            else
+            {
+                switchSoundTr.play();
+            }
         }
 
         else
