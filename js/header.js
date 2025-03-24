@@ -504,14 +504,14 @@ headerContainer.appendChild(copyDark);
 
 const langStorage=sessionStorage.getItem('lang');
 
-if(window.location.pathname=="/index.html" || window.location.pathname=='/')
+if(window.location.pathname=="./index.html" || window.location.pathname=='./')
 {
     languageContainer.appendChild(copyTurkce);
     sessionStorage.setItem('lang','english');
 
 }
 
-else if(window.location.pathname=='/tr/tr.html')
+else if(window.location.pathname=='./tr/tr.html')
 {
     languageContainer.appendChild(copyEng);
     sessionStorage.setItem('lang','turkce');
